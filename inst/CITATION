@@ -1,0 +1,7 @@
+bibentry(
+  bibtype  = "Misc",
+  title    = "Mitigating Omitted- and Included-Variable Bias in Estimates of Disparate Impact",
+  author   = "Jongbin Jung, Sam Corbett-Davies, Johann D. Gaebler, Ravi Shroff, Sharad Goel",
+  year     = 2024,
+  ulr      = "https://arxiv.org/abs/1809.05651"
+)

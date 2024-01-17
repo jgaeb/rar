@@ -1,0 +1,9 @@
+^LICENSE\.md$
+^cran-comments\.md$
+^_pkgdown\.yml$
+^docs$
+^logo$
+^pkgdown$
+^README\.Rmd$
+^codecov\.yml$
+^\.github$
