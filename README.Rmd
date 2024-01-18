@@ -23,29 +23,29 @@ knitr::opts_chunk$set(
 
 Quantitative studies of disparate impact face two key challenges:
 
-1. **_Omitted_-variable bias** occurs when an analyst omits a relevant variable,
+1. **_Omitted_-variable bias** occurs when an analyst omits relevant variables,
    like a job applicant's work history, in their regression model.
-2. **_Included_-variable bias** occurs when a researcher includes a variable
-   like a job applicant's height in their regression model that is not relevant
-   to the outcome of interest, thereby masking the relevance of gender, race, or
-   other protected attributes.
+2. **_Included_-variable bias** occurs when a researcher includes variables
+   in their regression model that are not relevant to the outcome of interest,
+   like a job applicant's height. These variables can mask the relevance of
+   gender, race, or other protected attributes.
 
 The `rar` package supports risk-adjusted regression, a framework for mitigating
 included-variable bias. It computes risk-adjusted disparities and performs an
-intepretable sensitivity analysis that can be used to assess the robustness of
+interpretable sensitivity analysis that can be used to assess the robustness of
 regression results to omitted-variable bias. See
 ["Mitigating Included- and Omitted-Variable Bias in Estimates of Disparate"](https://arxiv.org/abs/1809.05651)
 for more details.
 
 ## Installation
 
-You can install the latest stable release of rar from CRAN with:
+You can install the latest stable release of `rar` from CRAN with:
 
 ``` r
 install.packages("rar")
 ```
 
-You can install the development version of rar from [GitHub](https://github.com/) with:
+You can install the development version of `rar` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

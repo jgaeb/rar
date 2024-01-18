@@ -143,9 +143,7 @@ sens(df, group, frisked, p, "a", 0.1, m = 1001)
 sens(df, group, frisked, p, "a", 0.1, N = 1000, alpha = 0.1)
 
 # Run in parallel, adjusting the chunk size to avoid blocking
-sens(df, group, frisked, p, "a", 0.1,
-  n_threads = 4, eta = 0.0001,
-  chunk_size = 1000
-)
+sens(df, group, frisked, p, "a", 0.1, n_threads = 2, eta = 0.0001,
+     chunk_size = 1000)
 }
 }

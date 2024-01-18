@@ -274,13 +274,17 @@ test_that("Errors when argument integrity violated", {
     sens(df, group, obs, p, 1, 0.5, eta = 0.01, n_threads = 1.1, chunk_size = 200),
     "not a whole number"
   )
-  expect_warning(
-    sens(df, group, obs, p, 1, 0.5,
-      eta = 0.01, n_threads =
-        parallel::detectCores() + 1, chunk_size = 200
-    ),
-    "greater than the number of cores"
-  )
+  # NOTE: To avoid using too many cores on CRAN, we only check that the number
+  # of threads is not larger than the number of cores when not on CRAN.
+  if (!testthat:::on_cran()) {
+    expect_warning(
+      sens(df, group, obs, p, 1, 0.5,
+        eta = 0.01, n_threads =
+          parallel::detectCores() + 1, chunk_size = 200
+      ),
+      "greater than the number of cores"
+    )
+  }
 
   # Check that chunk size is strictly positive, length one, and roundable to
   # integer
