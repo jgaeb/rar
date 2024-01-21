@@ -15,7 +15,7 @@ extern "C" SEXP _rar_sens_(SEXP e, SEXP lwr, SEXP upr, SEXP lwr_iter, SEXP upr_i
 
 extern "C" {
 /* .Call calls */
-extern SEXP run_testthat_tests(void *);
+extern SEXP run_testthat_tests(SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rar_sens_",         (DL_FUNC) &_rar_sens_,         12},
