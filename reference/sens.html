@@ -20,7 +20,7 @@ the regression coefficients."><meta property="og:image" content="https://rar.jga
     
     <a class="navbar-brand me-2" href="../index.html">rar</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -269,11 +269,11 @@ observed and unobserved individuals within each group.</p>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="co"># Calculate 90% pointwise confidence intervals</span></span></span>
 <span class="r-in"><span><span class="fu">sens</span><span class="op">(</span><span class="va">df</span>, <span class="va">group</span>, <span class="va">frisked</span>, <span class="va">p</span>, <span class="st">"a"</span>, <span class="fl">0.1</span>, N <span class="op">=</span> <span class="fl">1000</span>, alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■                           </span>  13% |  ETA: 13s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  32% |  ETA: 10s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■                </span>  51% |  ETA:  8s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■         </span>  72% |  ETA:  4s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   </span>  93% |  ETA:  1s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■                           </span>  15% |  ETA: 13s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■                    </span>  35% |  ETA: 10s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■              </span>  55% |  ETA:  7s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■        </span>  76% |  ETA:  3s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  </span>  97% |  ETA:  0s</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 101 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    epsilon beta_min_b_05.0 beta_min_b_95.0 beta_max_b_05.0 beta_max_b_95.0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
@@ -291,10 +291,8 @@ observed and unobserved individuals within each group.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: beta_min_b &lt;dbl&gt;, beta_max_b &lt;dbl&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Run in parallel, adjusting the chunk size to avoid blocking</span></span></span>
-<span class="r-in"><span><span class="fu">sens</span><span class="op">(</span><span class="va">df</span>, <span class="va">group</span>, <span class="va">frisked</span>, <span class="va">p</span>, <span class="st">"a"</span>, <span class="fl">0.1</span>,</span></span>
-<span class="r-in"><span>  n_threads <span class="op">=</span> <span class="fl">4</span>, eta <span class="op">=</span> <span class="fl">0.0001</span>,</span></span>
-<span class="r-in"><span>  chunk_size <span class="op">=</span> <span class="fl">1000</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">sens</span><span class="op">(</span><span class="va">df</span>, <span class="va">group</span>, <span class="va">frisked</span>, <span class="va">p</span>, <span class="st">"a"</span>, <span class="fl">0.1</span>, n_threads <span class="op">=</span> <span class="fl">2</span>, eta <span class="op">=</span> <span class="fl">0.0001</span>,</span></span>
+<span class="r-in"><span>     chunk_size <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 101 × 3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    epsilon beta_min_b beta_max_b</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
