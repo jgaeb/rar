@@ -421,6 +421,10 @@ test_that("Errors when data integrity violated", {
 })
 
 test_that("Bootstrapped confidence intervals are valid", {
+  # NOTE: This test can be moderately fragile, so we set the seed to ensure
+  # reproucibility.
+  set.seed(1)
+
   # This test is slow, so don't run it on CRAN
   skip_on_cran()
   # It's also probabilistic, and can occasionally fail, so don't run it on CI
