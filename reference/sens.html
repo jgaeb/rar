@@ -20,7 +20,7 @@ the regression coefficients."><meta property="og:image" content="https://rar.jga
     
     <a class="navbar-brand me-2" href="../index.html">rar</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -269,11 +269,11 @@ observed and unobserved individuals within each group.</p>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="co"># Calculate 90% pointwise confidence intervals</span></span></span>
 <span class="r-in"><span><span class="fu">sens</span><span class="op">(</span><span class="va">df</span>, <span class="va">group</span>, <span class="va">frisked</span>, <span class="va">p</span>, <span class="st">"a"</span>, <span class="fl">0.1</span>, N <span class="op">=</span> <span class="fl">1000</span>, alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■                             </span>   8% |  ETA: 14s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■                       </span>  28% |  ETA: 11s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■                 </span>  47% |  ETA:  8s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■           </span>  67% |  ETA:  5s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■     </span>  88% |  ETA:  2s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■                          </span>  16% |  ETA: 12s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■                    </span>  36% |  ETA:  9s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■              </span>  56% |  ETA:  7s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■        </span>  77% |  ETA:  3s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Resamples <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  </span>  98% |  ETA:  0s</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 101 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    epsilon beta_min_b_05.0 beta_min_b_95.0 beta_max_b_05.0 beta_max_b_95.0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
